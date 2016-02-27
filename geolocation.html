@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Find Facebook Users</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="geolocation.css">
+    <title>Places Searchbox</title>
+    <style>
+      #target {
+        width: 345px;
+      }
+    </style>    <!--css for searchbox-->
+  </head>
+
+  <body>
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <div id="map"></div><!--map-->
+    <script>
+    var places;
+    </script>
+    <script src="geolocation.js"></script>  <!--importing geolocation.js file-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuK8oIGTYnB895xZdfUIMpj3iIYb96Rhw&libraries=places&callback=initAutocomplete"
+         async defer></script>
+    <div class = "container" align="center"><!--button-->
+      <a href="facebookuserinfo.html" class="btn btn-info" role="button">Facebook Users Info</a>
+    </div>
+
+  </body>
+</html>
