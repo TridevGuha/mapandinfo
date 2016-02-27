@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><title>Facebook User Info</title></head>
+<body>
+  <script>
+//var places (@line 31) from geolocation.html
+function testAPI() {
+console.log('Welcome!  Fetching your information.... ');
+FB.api('/me', function(response) {
+    console.log('Good to see you, ' + response.name + '.' + ' Email: ' +     response.email + ' Facebook ID: ' + response.id);
+  //console.log('Good to see you, ' + response.name + '.');
+
+  var location= response.location.name;
+  if (places == location) {     // we are using variable places from geolocation.html
+  var userfirstName=response.first_name;
+  var lastName=response.last_name;
+  var useremail=response.email;
+  var usergender=response.gender;
+  var userbithday=response.birthday;
+  var hometown= response.hometown.name;
+
+  //Now Facebook api key link must be provided here within a script tag to display the output
+
+  document.write(userfirstname+"<p>"+lastname+"<p>"+useremail+"<p>"+usergender+"<p>"+userbirthday+"<p>"+hometown+"<p>");
+  }
+});
+</script>
+
+</body>
+</html>
